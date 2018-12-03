@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Album;
 
+
 class AlbumsController extends Controller
 {
    
@@ -45,10 +46,12 @@ class AlbumsController extends Controller
         }
 
 
-    public function show($id){
-        $album = Album::with('photos')->find($id);
-        return view('albums.show')->with('album', $album);
-    }
+        public function show($id){
+            $album = Album::with('Photos')->find($id);
+            return view('albums.show')->with('album', $album);
+          }
+      
+      
     
 
 }

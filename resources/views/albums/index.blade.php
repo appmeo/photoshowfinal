@@ -11,10 +11,10 @@
           
             
         <div class="card mt-3 text-center" style="width:20rem;border-radius:5px;">
-          <a href="/albums/{{$album->id}}"><img class="thumbnail" style="border-radius:4px 4px 0px 0px;"src="storage/album_covers/{{$album->cover_image}}" alt="{{$album->name}}"></a>
+          <a href="/albums/{{$album->id}}"><img class="thumbnail" style="border-radius:4px 4px 0px 0px;" src="storage/album_covers/{{$album->cover_image}}" alt="{{$album->name}}"></a>
           
             
-          <h5 class="card-title mb-1 bg-light" style="padding:8px">{{$album->name}}</h5>
+          <h5 class="card-title mb-1 bg-light" style="padding:8px">{{ $album->name }}</h5>
          
           <p class="mt-2" >{{$album->description}}</p>
           

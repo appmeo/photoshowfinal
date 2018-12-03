@@ -39,4 +39,18 @@ class PhotosController extends Controller
             return redirect('/albums/'.$request->input('album_id'))->with('success', 'Photo Saved');
             
     }
+
+        public function show($id){
+            $photo = Photo::find($id);
+            return view('photos.show')->with('photo', $photo);
+        }
+
+        public function destroy($id)
+        {
+        $photo = Photo::find($id);
+        //nog deleten van storage location
+        $photo->delete();
+        return redirect('/')->with('success', 'Photo deleted');
+        }
+
 }
